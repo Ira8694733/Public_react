@@ -7,7 +7,7 @@ import {RiDeleteBin2Line} from "react-icons/ri";
 function Todo ({todo, removeTodo, checkedTodo}) {
 
     return  (
-        <div className={`${styles.todo} ${todo.isComplete ? styles.completedTodo : {}}`}>
+        <div className={`${styles.todo} ${todo.isComplete ? styles.completedTodo : styles.todo}`}>
             <label htmlFor="subscribe">
                 <input type="checkbox" id="checkbox" name="subscribe" onChange={() => checkedTodo(todo.id)} />
             </label>

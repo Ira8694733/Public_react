@@ -17,11 +17,11 @@ function App() {
         setTodos([...todos, newTodo])}
 
     const removeTodoHandler = (id) => {
-        setTodos(todos.filter((todo) => {return !todo.isComplete}))
+        setTodos(todos.filter((todo) =>  {return !todo.isComplete} ))
     }
 
-      const CheckedTodoList = (id) => {
-         setTodos(todos.map((todo) => todo.id === id ? { ...todo, isComplete:true } : {...todo}))
+      const checkedTodoList = (id) => {
+         setTodos(todos.map((todo) => todo.id === id ? { ...todo, isComplete:!todo.isComplete } : {...todo}))
      }
 
   return (
@@ -32,7 +32,7 @@ function App() {
         <Todolist
             todos={todos}
             removeTodo={removeTodoHandler}
-            checkedTodo={CheckedTodoList}/>
+            checkedTodo={checkedTodoList}/>
     </div>
       </>
   );

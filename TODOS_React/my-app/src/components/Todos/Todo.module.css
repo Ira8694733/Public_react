@@ -18,7 +18,7 @@
 
 .completedTodo {
 
-    color: green;
+    color: dimgrey;
     text-decoration: line-through;
-    background-color: lightblue;
+    background-color: #4682B4;
 }
