@@ -1,10 +1,12 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Todo from './Todo'
+import MyContext from "../../providers/MyContext";
 
-const TodoList = ({todos, removeTodo, checkedTodo}) => {
-    return todos.map((todo) => <Todo key={todo.id} todo={todo}
-                                     removeTodo={removeTodo}
-                                     checkedTodo={checkedTodo}/>);
-}
+const TodoList = () => {
+    const {todos} = useContext(MyContext);
+
+
+    return todos.map((todo) => <Todo key={todo.id} todo={todo}/>);
+};
 
 export default TodoList

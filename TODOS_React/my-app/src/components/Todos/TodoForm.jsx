@@ -1,14 +1,17 @@
 import React, {useState}   from 'react'
 import styles from './TodoForm.module.css'
+import {useContext} from "react";
+import MyContext from "../../providers/MyContext";
 
 
-const TodoForm =({addTodo}) => {
+const TodoForm =() => {
+   const {addTodoHandler} = useContext (MyContext);
 
     const [text, setText] = useState('');
 
     const onSubmitHandler = (event) => {
         event.preventDefault();
-        addTodo(text);
+        addTodoHandler(text);
         setText('');
     }
 
@@ -18,7 +21,7 @@ const TodoForm =({addTodo}) => {
             <input placeholder='Enter new task' value={text} onChange={(e) => setText(e.target.value)}/>
         </form>
         </div>
-    )
-}
+    );
+};
 
 export default TodoForm
