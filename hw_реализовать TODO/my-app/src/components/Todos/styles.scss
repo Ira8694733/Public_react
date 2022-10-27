@@ -1,0 +1,63 @@
+.todos {
+  &_list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+  }
+
+  &_pagination {
+    margin-top: 20px;
+  }
+}
+
+  .todos-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background-color: blanchedalmond;
+    }
+
+    &--completed {
+      background-color: #eee;
+      text-decoration: line-through
+    }
+
+    &_button {
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+      cursor: pointer;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+.todos-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  &_item {
+    background: transparent;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 4px 8px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: blanchedalmond;
+    }
+
+    &--active {
+      background-color: blanchedalmond;
+    }
+  }
+}
